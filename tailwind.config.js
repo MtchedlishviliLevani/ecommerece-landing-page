@@ -7,16 +7,21 @@ export default {
         padding: "0rem",
         center: "auto",
       },
-      screens: {
-        sm: "480px",
-        md: "768px",
-        xl: "940px",
-        "2xl": "1110px",
-      },
-      fontFamily: {
-        kumbh: ["'Kumbh Sans', sans-serif"],
-      },
+    },
+    screens: {
+      "2xl": "1111px",
+      xl: { max: "1110px" },
+      lg: { max: "940px" },
+      md: { max: "767px" },
+      sm: { max: "639px" },
+      // lg: "768px",
+      // "2xl": "1100px",
+      // sm: "340px",
+    },
+    fontFamily: {
+      kumbh: ["'Kumbh Sans', sans-serif"],
     },
   },
+
   plugins: [],
 };

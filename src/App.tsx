@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import "./App.css";
 import Header from "./components/Header";
 import ItemDescription from "./components/ItemDescription";
 import ItemPictures from "./components/ItemPictures";
@@ -44,7 +43,7 @@ function App() {
           <div className="opacity-[100] relative left-[50%] top-[38%]  w-[550px] min-h-[550px] translate-x-[-50%] translate-y-[-50%]">
             <img
               src={closeIcon}
-              className="absolute left-[96%] top-[-5.5%] cursor-pointer z-30 "
+              className="absolute left-[96%] lg:left-[83.5%] top-[-5.5%] lg:top-[5%] cursor-pointer z-30 "
               onClick={() => dispatch(setIsShowedSlider(false))}
             />
             <img
@@ -55,23 +54,23 @@ function App() {
                 e.stopPropagation();
               }}
               src={rigthArrow}
-              className="absolute top-[50%] left-[95%] translate-y-[-50%] z-30 cursor-pointer"
+              className="absolute top-[50%] left-[95%] lg:left-[84%] translate-y-[-50%] z-30 cursor-pointer"
             />
             <img
               onClick={(e) => prevSlide(e)}
               src={leftArrow}
-              className="absolute top-[50%] left-[-5%] translate-y-[-50%] z-30 cursor-pointer"
+              className="absolute top-[50%] left-[-5%] lg:left-[5%] translate-y-[-50%] z-30 cursor-pointer"
             />
             <img
               src={mainPhoto}
               alt=""
-              className="absolute  w-[550px] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-20 opacity-100 rounded-xl"
+              className="absolute  w-[550px] lg:w-[425px] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-20 opacity-100 rounded-xl"
               onClick={(e) => {
                 e.stopPropagation();
                 e.isPropagationStopped(); // Prevent event from bubbling up to parent div
               }}
             />
-            <div className="flex justify-center gap-5 w-[100%] top-[105%] absolute">
+            <div className="flex justify-center gap-5 w-[100%] top-[105%] lg:top-[95%] absolute">
               {picturesList.map((picture, index) => (
                 <div
                   key={index}
@@ -85,7 +84,7 @@ function App() {
                         ), url(${picture.src.photo})`
                         : `url(${picture.src.photo})`, // Provide a fallback value when the condition is not met
                   }}
-                  className={`w-[88px] h-[88px] rounded-md bg-cover cursor-pointer 
+                  className={`w-[88px] lg:w-[100px] h-[88px] lg:h-[100px] rounded-md bg-cover cursor-pointer 
                      `}
                   onClick={(e) => {
                     setActivePhoto(index);
@@ -97,10 +96,10 @@ function App() {
           </div>
         </div>
       ) : null}
-      <div className="container max-w-[1110px] w-[90%]">
+      <div className="container max-w-[1110px] w-[90%] md:p-[0px] ">
         <Header />
         <main>
-          <div className="flex my-[90px] max-w-[1015px] w-[90%] m-auto md:gap-[8%] xl:gap-[14%]">
+          <div className="flex md:flex-col my-[90px] max-w-[1015px] w-[90%]  m-auto md:mt-[0px] md:gap-[24px] lg:gap-[8%] xl:gap-[12%] gap-[14%]">
             <ItemPictures />
             <ItemDescription />
           </div>

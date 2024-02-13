@@ -7,22 +7,22 @@ interface pictureListTypes {
 export const picturesList: pictureListTypes[] = [
   {
     src: {
-      photo: "src/assets/images/itemsPhotos/sneaker1.png",
+      photo: "/images/itemsPhotos/sneaker1.png",
     },
   },
   {
     src: {
-      photo: "src/assets/images/itemsPhotos/sneaker2.png",
+      photo: "/images/itemsPhotos/sneaker2.png",
     },
   },
   {
     src: {
-      photo: "src/assets/images/itemsPhotos/sneaker3.png",
+      photo: "/images/itemsPhotos/sneaker3.png",
     },
   },
   {
     src: {
-      photo: "src/assets/images/itemsPhotos/sneaker4.png",
+      photo: "/images/itemsPhotos/sneaker4.png",
     },
   },
 ];

@@ -50,12 +50,12 @@ function Header() {
               SNEAKERS
             </span>
           </div>
-          <ul className="flex justify-between gap-8 font-kumbh md:gap-4">
+          <ul className="flex md:hidden justify-between gap-8 lg:gap-5 font-kumbh md:gap-4">
             {linksList.map((link, index) => (
               <li
                 className="text-[15px] relative first-letter:uppercase  cursor-pointer text-[#69707D] hover:text-red-300 contenet before:content['']
-                 hover:before:w-[100%] hover:before:h-[3px] hover:before:bg-orange-300 hover:before:absolute 
-                 hover:before:top-[200%]"
+                 hover:before:w-[100%] hover:before:h-[4px] hover:before:bg-orange-300 hover:before:absolute 
+                 hover:before:top-[370%]"
                 key={index}
               >
                 {link}
@@ -63,7 +63,7 @@ function Header() {
             ))}
           </ul>
         </div>
-        <div className="flex  gap-11 relative">
+        <div className="flex  gap-11 lg:gap-9 relative">
           <img
             className="cursor-pointer"
             src={basketIcon}

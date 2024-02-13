@@ -41,4 +41,5 @@ export const {
   setIsShowedAmount,
   setAmountItem,
 } = cartSlice.actions;
+
 export default cartSlice.reducer;
